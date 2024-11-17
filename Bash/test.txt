@@ -1,0 +1,8 @@
+
+    Directory: C:\Users\Dell\Desktop\Programming\Bash
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          31-07-2024 07:24 AM              0 test.txt
+-a---          31-08-2024 04:27 PM            382 wait.c
+

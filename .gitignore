@@ -1,0 +1,119 @@
+# Rust files and directories
+debug/
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb  # Debug files for Windows
+
+# C++ files
+*.d
+*.slo
+*.lo
+*.o
+*.obj
+*.gch
+*.pch
+*.so
+*.dylib
+*.dll
+*.mod
+*.smod
+*.lai
+*.la
+*.a
+*.lib
+*.exe
+*.out
+*.app
+
+# Kernel and build artifacts
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# CMake generated files
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+CMakeUserPresets.json
+
+# Node.js files and directories
+node_modules/
+bower_components/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python distribution and environment files
+build/
+dist/
+.eggs/
+*.egg-info/
+MANIFEST
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs and debug files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Java and JAR files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Coverage and test directories
+coverage/
+.tox/
+.nox/
+.nyc_output/
+.cache/
+.webassets-cache/
+.scrapy/
+docs/_build/
+
+# Vue, React, and static site generator output
+.next/
+.nuxt/
+.vuepress/
+.serverless/
+
+# Miscellaneous IDE and project files
+.vscode-test/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+*.tgz
+.DS_Store
+
+
+/Books

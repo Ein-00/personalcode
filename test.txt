@@ -1,0 +1,31 @@
+
+    Directory: C:\Users\Dell\Desktop\Programming
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          07-04-2024 01:15 PM                .lapce
+d----          01-08-2023 07:03 PM                .metadata
+d----          12-07-2023 09:12 AM                .mypy_cache
+d----          10-07-2023 08:49 AM                .vscode
+d----          08-04-2024 07:30 AM                ASM
+d----          03-04-2024 11:01 PM                Backup
+d----          22-07-2024 10:28 AM                Bash
+d----          30-06-2024 04:13 PM                Books
+d----          24-10-2023 08:49 PM                build
+d----          29-06-2024 12:12 PM                C
+d----          02-11-2023 07:40 PM                C#
+d----          08-04-2024 08:24 PM                C++
+d----          22-07-2024 10:34 AM                Go
+d----          27-03-2024 06:21 PM                Java
+d----          28-10-2023 01:15 PM                Javascript
+d----          13-11-2023 11:34 AM                Kotlin
+d----          08-04-2024 07:50 PM                Lua
+d----          19-07-2024 08:42 AM                Notes
+d----          17-07-2024 08:56 PM                PYTHON
+d----          24-04-2024 04:53 PM                React
+d----          12-07-2024 09:02 AM                Rust
+-a---          17-12-2023 10:08 AM             52 saves.ini
+-a---          22-07-2024 10:34 AM              0 test.txt
+-a---          25-03-2024 04:24 PM            993 untitled.py
+-a---          28-03-2024 08:00 PM            199 vsc.code-workspace
+

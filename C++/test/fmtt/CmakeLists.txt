@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+project(fmtt)
+
+# Set the C++ standard
+set(CMAKE_CXX_STANDARD 11)
+
+# Include vcpkg toolchain file
+set(CMAKE_TOOLCHAIN_FILE "C:/Users/Dell/Desktop/Programming/C++/test/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
+# Find the Crypto++ package
+find_package(CryptoPP REQUIRED)
+
+# Add your executable
+add_executable(fmtt main.cpp)
+
+# Link the Crypto++ library
+target_link_libraries(fmtt PRIVATE cryptopp::cryptopp)

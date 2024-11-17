@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=WildCardD
+comment1.params=o
+comment1.target=Stats(java.lang.Number[])
+comment2.params=
+comment2.target=double\ average()
+comment3.params=ob
+comment3.target=boolean\ SameAVG(Stats)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

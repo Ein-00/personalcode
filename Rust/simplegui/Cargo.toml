@@ -1,0 +1,9 @@
+[package]
+name = "simplegui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+druid = "0.8.3"
+iced = "0.13.1"
+rodio = "0.19.0"

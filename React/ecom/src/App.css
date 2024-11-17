@@ -1,0 +1,58 @@
+#root {
+  max-width: 1280px;
+  
+  padding: 2rem;
+  text-align: left;
+  align-items: left;
+ 
+}
+
+body{
+  background-color: rgb
+  
+}
+
+
+/*
+.Header{
+  position:absolute;
+  left:50%;
+  bottom:45%;
+  width: 300px; 
+  color: black;
+}
+.inputid{
+  
+  position:absolute;
+  left:50%;
+  bottom:40%;
+  width: 300px;
+  color: black;
+  background-color: rgb(167, 241, 233);
+  border-radius: 15px;
+  height: 20px;
+  text-align: center;
+}
+.inputpass{
+  position:absolute;
+  left:50%;
+  bottom:35%;
+  width: 300px;
+  color: black;
+  background-color: rgb(167, 241, 233);
+  border-radius: 15px;
+  height: 20px;
+  text-align: center;
+}
+.loginb{
+  position: absolute;
+  left: 50.2%;
+  bottom: 27%;
+  background-color:rgb(188, 237, 183);
+  color: black;
+  width: 300px;
+  border-radius: 15px;
+  
+  
+
+}
