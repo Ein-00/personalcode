@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: antiquewhite;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family: "Noto Sans", serif;
+    
+    font-weight: 400;
+    
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    height: 69px;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+nav ul li {
+    padding: 0 12px;
+}
+.brand img{
+    
+    width: 65px;
+    padding : 0px 10px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.container{
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: "JetBrains Mono", serif;
+    display : flex;
+    width:70%;
+    margin: 23px auto;
+    border-radius: 12px;
+    background-image: url('wall.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
+.bottom{
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: white;
+    flex-direction: column;
+
+
+}`
+.icons{
+    margin-top: 13px;
+}
+.icons i{
+    cursor: pointer;
+}
+#progressbar{
+    width: 80vw;
+    
+
+}
