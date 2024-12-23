@@ -52,6 +52,17 @@ nav ul li {
     
 
 }
+#starttime{
+    position: absolute;
+    left : 120px;
+    bottom: 85px;
+
+}
+#endtime{
+    position: absolute;
+    right: 100px;
+    bottom: 85px;
+}
 .bottom{
     position: sticky;
     height: 130px;
@@ -79,6 +90,9 @@ nav ul li {
 .songlist{
     margin: 10px 10px;
 }
+.songlistplay{
+    margin-right: 10px;
+}
 
 .songitemcontainer{
     margin-top: 30px;
@@ -89,7 +103,7 @@ nav ul li {
     display: flex;
     background-color: white;
     color: black;
-    margin: 12px 0px;
+    margin: 12px 12px;
     justify-content: space-between;
     align-items: center ;
     border-radius: 13px;

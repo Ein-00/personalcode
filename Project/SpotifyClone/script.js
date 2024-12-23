@@ -5,6 +5,10 @@ let masterPlay = document.getElementById('masterplay')
 let myProgressbar = document.getElementById('progressbar');
 let gif = document.getElementById('gif');
 let songitems = Array.from(document.getElementsByClassName('songitem'));
+let mastersongname = document.getElementById('masterSongName');
+let timestamp = document.getElementsByClassName('timestamp');
+let starttime = document.getElementById('starttime');
+let endtime = document.getElementById('endtime');
 let songs = [
     {songName:"Akatsuki no Kuruma" , filepath:"songs/Akatsuki no Kuruma.mp3",coverpath:"covers/ak.png" },
     {songName:"Anime Janai" , filepath:"songs/Anime Janai ～ Yume wo Wasureta Furui Chikyujin-yo.mp3",coverpath:"covers/animj.png" },
@@ -29,7 +33,7 @@ let audioelement = new  Audio('songs/Akatsuki no Kuruma.mp3');
 //audioelement.play()
 
 
-//handling play /pause
+//handling play/pause
 
 masterPlay.addEventListener('click' , ()=>{
     if(audioelement.paused || audioelement.currentTime<= 0){
@@ -37,7 +41,6 @@ masterPlay.addEventListener('click' , ()=>{
         masterPlay.classList.remove('fa-circle-play');
         masterPlay.classList.add('fa-circle-pause');
         gif.style.opacity = 1;
-
     }
     else{
         audioelement.pause();
@@ -47,14 +50,27 @@ masterPlay.addEventListener('click' , ()=>{
     }
 })
 
-//Listen to events 
+//Listen to events  adn change the time 
 
-audioelement.addEventListener('timeupdate' , ()=>{
-   
+audioelement.addEventListener('timeupdate' , ()=>{  
     progress = parseInt((audioelement.currentTime/audioelement.duration)*100)
-    //console.log(audioelement.currentTime)
-    
     myProgressbar.value = progress
+    console.log(audioelement.currentTime)
+    let duration = audioelement.currentTime;
+    let minutes = Math.floor(duration / 60);
+    let seconds = Math.floor(duration % 60);
+    if (seconds < 10) {
+        seconds = '0' + seconds;
+    }
+    starttime.innerText = `${minutes}:${seconds}`;
+    let sduration = audioelement.duration;
+    let sminutes = Math.floor(sduration / 60);
+    let sseconds = Math.floor(sduration % 60);
+    if (sseconds < 10) {
+        sseconds = '0' + sseconds;
+    }
+    endtime.innerText = `${sminutes}:${sseconds}`;
+
 })
 
 
@@ -65,28 +81,46 @@ myProgressbar.addEventListener('change' , ()=>{
 })
 
 
+
+//timestamp
+
+songs.forEach((song, index) => {
+    let audio = new Audio(song.filepath);
+    audio.addEventListener('loadedmetadata', () => {
+        let duration = audio.duration;
+        let minutes = Math.floor(duration / 60);
+        let seconds = Math.floor(duration % 60);
+        if (seconds < 10) {
+            seconds = '0' + seconds;
+        }
+        timestamp[index].innerText = `${minutes}:${seconds}`;
+    });
+});
+
 //play button on the list
 
 
 const makeAllPlays = ()=>{
     
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
-        element.classList.remove('fa-pause-circle');
-        element.classList.add('fa-play-circle');
+        element.classList.remove('fa-circle-pause');
+        element.classList.add('fa-circle-play');
     })
 }
 Array.from(document.getElementsByClassName('songItemPlay')) .forEach((element)=>{
     element.addEventListener('click' , (e)=>{
         console.log(e);
         makeAllPlays();
-        songindex = parseInt(e.target.id);
-        console.log(songindex); 
+        songindex = parseInt(e.target.id);      
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
         audioelement.currentTime = 0;
         src = songs[--songindex].filepath
         audioelement.src=src;
+        mastersongname.innerText = songs[songindex].songName;
+        console.log(audioelement.duration); 
         audioelement.play();
+        gif.style.opacity = 1;
         masterPlay.classList.remove('fa-circle-play');
         masterPlay.classList.add('fa-circle-pause');
     });
@@ -106,6 +140,8 @@ document.getElementById('next').addEventListener('click' , ()=>{
     src = songs[songindex].filepath
     audioelement.src=src;
     audioelement.play();
+    gif.style.opacity = 1;
+    mastersongname.innerText = songs[songindex].songName;
     masterPlay.classList.remove('fa-circle-play');
     masterPlay.classList.add('fa-circle-pause');
     
@@ -121,9 +157,9 @@ document.getElementById('previous').addEventListener('click' , ()=>{
     audioelement.currentTime = 0;
     src = songs[songindex].filepath
     audioelement.src=src;
+    mastersongname.innerText = songs[songindex].songName;
     audioelement.play();
+    gif.style.opacity = 1;
     masterPlay.classList.remove('fa-circle-play');
     masterPlay.classList.add('fa-circle-pause');
-    
-
 });
